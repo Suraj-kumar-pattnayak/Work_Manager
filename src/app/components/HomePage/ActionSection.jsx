@@ -2,8 +2,14 @@
 import React from 'react'
 // import bgImage from '@/assets/action-bg.jpg' // Use your own image in /public or /assets
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 const ActionSection = () => {
+  const router = useRouter()
+  
+  function gotoAdd(){
+   router.push("/add-task")
+  }
   return (
     <div className="relative h-[400px] md:h-[500px] w-full rounded-xl overflow-hidden shadow-lg mt-10">
       {/* Background Image */}
@@ -23,7 +29,7 @@ const ActionSection = () => {
         <p className="text-lg md:text-xl text-gray-200 font-serif mb-6 max-w-2xl">
           Join Work Manager today and experience streamlined user management, effortless task handling, and real-time progress tracking.
         </p>
-        <button className="bg-white text-blue-900 hover:bg-blue-200 transition duration-300 font-semibold py-2 px-6 rounded-full font-serif">
+        <button onClick={gotoAdd}  className="bg-white text-blue-900 hover:bg-blue-200 transition duration-300 font-semibold py-2 px-6 rounded-full font-serif">
           Start Now
         </button>
       </div>
