@@ -1,7 +1,7 @@
 'use client';
 import React, { useContext, useState } from 'react'
 import Image from 'next/image';
-import loginsvg from '../../assets/login.svg'
+import loginsvg from '../../assets/login2.svg'
 import { login } from '@/services/loginService';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation';
