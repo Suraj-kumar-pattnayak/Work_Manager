@@ -2,7 +2,7 @@
 import React from 'react';
 import {useState} from 'react';
 import Image from 'next/image';
-import addtasksvg from '../../assets/add_task.svg'
+import addtasksvg from '../../assets/add-task.svg'
 import { addTask } from '@/services/taskService';
 
 
@@ -43,8 +43,8 @@ const AddTask = () => {
   })
  }
     return (
-    <div className='grid grid-cols-12'>
-        <div className='border col-span-4 col-start-5 shadow-amber-700 shadow p-3'>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800 flex items-center justify-center p-4">
+      <div className="bg-gray-900 text-white w-full max-w-md rounded-2xl shadow-2xl p-8">
            <div className='mt-4 flex justify-center'> 
              <Image src= {addtasksvg} style={{
               width:"60%" 
@@ -113,11 +113,11 @@ const AddTask = () => {
               </select>
             </div>
 
-            <div className='mt-4 flex justify-end'>
+            <div className="flex items-center justify-between mt-4">
             <button type='submit'
-            className='font-serif bg-blue-400 hover:bg-blue-500 px-3 py-2 rounded-lg'>Add task</button>
+            className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition">Add task</button>
             <button  onClick={clearData} type='button'
-            className='font-serif bg-red-600 hover:bg-red-700  px-3 py-2 rounded-lg ms-3'>Clear</button>
+            className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold transition">Clear</button>
             </div>
             {/* {JSON.stringify(task)} */}
             
