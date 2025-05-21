@@ -15,9 +15,9 @@ try {
    //  console.log(decoded);
    
     
-    //find whole detail by id                        //learn diff betn decoded and user why diff output
-
-    
+                            //learn diff betn decoded and user why diff output
+     await connectDB(); 
+    //find whole detail by id
     const user = await User.findById(decoded._id)  //why this line not working
    //  console.log(user);
    //  console.log("4");
