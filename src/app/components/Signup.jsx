@@ -70,8 +70,8 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
 
   return (
-    <div className='grid grid-cols-12'>
-        <div className='col-span-4 col-start-5 shadow-amber-700 shadow p-3'>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800 flex items-center justify-center p-4">
+      <div className="bg-gray-900 text-white w-full max-w-md rounded-2xl shadow-2xl p-8">
           <div className='mt-4 flex justify-center'>
                 <Image src={signupsvg}
                  style={{ width:"50%"}}
@@ -163,16 +163,16 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
 
 
-            <div className='mt-4 flex justify-center'>
+            <div className="flex items-center justify-between mt-4">
               <button
               type='submit'
-              className='bg-blue-700 hover:bg-blue-500 px-3 py-2 rounded-lg font-serif'
+              className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition"
               >Signup</button>
 
               <button
               type='button'
               onClick={clearData}
-              className='bg-red-700 hover:bg-red-500 px-3 py-2 rounded-lg ms-3 font-serif'
+              className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold transition"
               >Reset</button>
             </div>
             </form>
