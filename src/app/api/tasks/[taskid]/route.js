@@ -5,6 +5,7 @@ import { NextResponse } from "next/server";
 export async function GET(request, {params}){
     const {taskid} = params;
    try {
+    await connectDB();
     const task = await Task.findById({
         _id:taskid
     });
@@ -53,7 +54,8 @@ export async function PUT(request, {params}){
         task.createdAt = createdAt;
         task.assignedTo = assignedTo;
         console.log(task.assignedTo);
-        
+
+        await connectDB();
         await task.save();         //save permanently in DB
         return NextResponse.json(task);
     } catch (error) {
