@@ -2,8 +2,13 @@
 import React from 'react'
 import tasklistsvg from '@/assets/tasklist.svg'
 import Image from 'next/image';
+import { useRouter } from 'next/navigation'
 
 const BannerSection = () => {
+  const router = useRouter()
+function gotoShow(){
+ router.push("/show-task")
+}
   return (
     <div className="bg-gradient-to-r from-blue-800 to-indigo-900 text-white py-16 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
@@ -15,7 +20,7 @@ const BannerSection = () => {
           <p className="text-lg md:text-xl mb-6 font-serif">
             Organize your tasks efficiently with our task manager app
           </p>
-          <button className="bg-white text-blue-900 hover:bg-blue-100 font-semibold py-2 px-6 rounded-full transition duration-300 font-serif">
+          <button  onClick={gotoShow}className="bg-white text-blue-900 hover:bg-blue-100 font-semibold py-2 px-6 rounded-full transition duration-300 font-serif">
             Get Started
           </button>
         </div>
