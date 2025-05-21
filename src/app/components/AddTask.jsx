@@ -2,7 +2,7 @@
 import React from 'react';
 import {useState} from 'react';
 import Image from 'next/image';
-import addtasksvg from '../../assets/add_task.svg'
+import addtasksvg from '../../assets/add-task.svg'
 import { addTask } from '@/services/taskService';
 "use client";
 import React from 'react';
