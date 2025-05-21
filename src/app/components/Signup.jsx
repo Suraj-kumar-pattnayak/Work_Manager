@@ -2,7 +2,7 @@
 import React from 'react';
 import {useState} from 'react';
 import Image from 'next/image';
-import signupsvg from '../../assets/signup.svg'
+import signupsvg from '../../assets/signup2.svg'
 import { signup } from '@/services/signupService';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation';
