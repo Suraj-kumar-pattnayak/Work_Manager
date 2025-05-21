@@ -49,7 +49,7 @@ export async function DELETE(request, {params}){
 export async function GET(request, {params}){
 
     const {userid} = params;
-    
+    await connectDB();
    try {
     const storeuser =await User.findById({          //imp
         _id: userid
@@ -81,6 +81,7 @@ export async function PUT(request, {params}) {
 
     try {
     // user.name = name; -> FIRST ONE
+    await connectDB();
     const user = await User.findById(userid);
     user.name = name;                           //update
     user.password = password;
